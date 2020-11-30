@@ -1,0 +1,118 @@
+:root {
+    --blue: #b6d9d5;
+    --dark_blue: #789f9e;
+    --gray: #4f6467;
+    --light_gray: rgb(233, 233, 233);
+    --tomato_red: #fe615a;
+  }
+
+  nav {
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    min-height: 8vh;
+    background-color: var(--blue);
+  }
+  .logo {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    margin-left: 15px;
+  }
+  .navlinks {
+    display: flex;
+    margin-left: auto;
+    /* justify-content: space-around; */
+    /* margin: 0 10px; */
+    width: 50%;
+    height: 8vh;
+  }
+  .navlinks li {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+  }
+  .navlinks a {
+   padding: 0 5px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+    color: black;
+    /* letter-spacing: 3px; */
+    font-size:1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+  }
+  .navlinks a:hover{
+    background-color: var( --light_gray);
+  }
+  .burger {
+    display: none;
+  }
+  .burger div {
+    width: 25px;
+    height: 4px;
+    background-color: black;
+    margin: 4px;
+    transition: all 0.3s ease-in;
+  }
+  
+  @media screen and (max-width: 960px) {
+    html,
+    body {
+      overflow-x: hidden;
+    }
+    .navlinks {
+      position: fixed;
+      z-index: 10;
+      right: 0px;
+      height: 50vh;
+      top: 8vh;
+      background-color: var(--blue);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+    }
+    .navlinks li {
+      opacity: 0;
+    }
+    .burger {
+      margin-left: auto;
+      margin-right: 15px;
+      display: block;
+      cursor: pointer;
+    }
+  }
+  .nav-active {
+    transform: translateX(0);
+  }
+  
+  @keyframes navlinkfade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  

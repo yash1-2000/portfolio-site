@@ -1,0 +1,408 @@
+:root {
+  --blue: #b6d9d5;
+  --dark_blue: #789f9e;
+  --gray: #4f6467;
+  --light_gray:rgb(233, 233, 233);
+  --tomato_red: #fe615a;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  /* background-color:var(--light_gray); */
+  background-color:var(--light_gray);
+}
+hr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(48, 48, 48, 0.583);
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.3); */
+}
+.mid-section {
+  width: 80%;
+  margin: auto;
+}
+.section-heading{
+  text-align: center;
+  font-family: 'Alatsi', sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: -20px;
+}
+.section-sub-heading{
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1.6px;
+  font-size: 1.4rem;
+  /* font-weight: 300;
+  margin-top: -20px; */
+}
+p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+}
+.skew-1{
+  height: 50px;
+  background-color:var(--light_gray);
+  position: relative;
+  bottom: 25px;
+  transform: skewY(-2deg);
+  padding-bottom: 50px;
+}
+.skew-2{
+  height: 50px;
+  background-color:var(--light_gray);
+  position: relative;
+ top: 20px;
+  transform: skewY(1.6deg);
+  padding-bottom: 50px;
+}
+.skew-3{
+  height: 50px;
+  /* background-color:var(--light_gray); */
+  background-color: var(--blue);
+  position: relative;
+  top: 25px;
+  transform: skewY(-2deg);
+  /* padding-bottom: 50px; */
+}
+.insta:hover{
+  color: #d43e91;
+}
+.github:hover{
+  color:#121317;
+}
+.linkedin:hover{
+  color:#0077b5;
+}
+.email:hover{
+  color: #f14236;
+}
+/* ============================================================about============================================================ */
+#about{
+  background-image: url("images/about-background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about-container{
+ padding: 100px 30px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.about-card{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  color: #eef3dc;
+  height: 40vh;
+  width: 100%;
+  border-radius: 10px;
+}
+.name-social-links{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 75%;
+  background-color: rgba(42, 82, 84, 0.761);
+  margin: auto;
+  border-radius: 10px;
+  color: #e2e2e2;
+}
+.name-social-links h1{
+  font-size: 1.8rem;
+  font-family: 'Alatsi', sans-serif;
+  font-weight: 200;
+}
+.social-links a{
+  color: #e2e2e2;
+  margin: 6px;
+  font-size: 1.3rem;
+  transition: 0.5s ease;
+}
+.about-desc{
+  height: 90%;
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e0e0eb8;
+  border-left: 2px solid rgb(202, 202, 202);
+}
+.about-info{
+  width: 90%;
+  align-items: center;
+  text-align: justify;
+}
+.about-info h1{
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Alatsi', sans-serif;
+  font-weight: 500;
+}
+/* ==========================================================experience========================================================== */
+#experience{
+  background-color:var(--light_gray);
+}
+.experience-container h3{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  margin: 5px 0;
+}
+.experience-container h4{
+  font-family: 'Alatsi', sans-serif;
+  font-weight: 500;
+  margin-top: 5px;
+  transition: 0.5s ease;
+}
+
+/* =====================================================projects================================================================ */
+#projects{
+  background-color:#fe615a;;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.all-projects{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  width: 280px;
+  display: grid;
+  grid-template-columns: 280px;
+  /* grid-template-rows: 169px 210px 40px; */
+  grid-template-rows: auto auto 40px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.card-image {
+  grid-area: image;
+}
+.card-image img{
+ width: 100%;
+ /* height: 100%; */
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+ object-fit: contain;
+}
+.project-desc {
+  grid-area: text;
+  margin: 13px;
+}
+.project-links {
+  grid-area: stats;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* background: var(--tomato_red); */
+  background: var(--dark_blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 15px;
+}
+.project-links a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s ease;
+}
+.project-links a:nth-child(even) {
+  border-bottom-right-radius: 10px;
+}
+.project-links a:nth-child(odd) {
+  border-bottom-left-radius: 10px;
+}
+.project-links a:only-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.project-links a:hover {
+  color: rgb(255, 255, 255);
+  background-color:  #2778d0;
+  text-shadow: 2px 2px 4px #242222;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+.card {
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin: 15px;
+}
+/* =========================================skills================================================================= */
+.skill-logos{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.logo-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  transition: 0.5s ease;
+}
+.js:hover{
+  color: #efd81d;
+}
+.react:hover{
+  color:#61dafb;
+}
+.node:hover{
+  color: #88c249
+}
+.python:hover{
+  color: #356c9a;
+}
+.skills-para{
+    font-family: 'Alatsi', sans-serif;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+/* ==================================================blogs============================================================ */
+#blogs{
+  padding-top: 70px;
+  padding-bottom: 50px;
+  background-color:var(--tomato_red);
+  margin-bottom: -90px;
+}
+.blog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+}
+.blog-container{
+  margin: 20px auto;
+  background-color: #ccd1d19c;
+}
+.blog-container a{
+  text-decoration: none;
+  color: #161616;
+}
+.blog-container img{
+  width: 40%;
+  /* height: 1; */
+  /* border-radius: 10px; */
+}
+.blog-desc{
+  padding: 15px;
+  /* background-color: #ccd1d19c; ; */
+}
+.blog-desc a{
+  text-decoration: none;
+  color: #121317;
+}
+.blog-desc h2{
+  font-family: 'Alatsi', sans-serif;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+.blog-desc h4{
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+}
+/* ===============================================education==========================================================*/
+#education{
+  background-color: var(--blue);
+  padding-top: 45px;
+}
+.education-container h3{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 5px 0;
+}
+/* ======================================================footer====================================================== */
+footer{
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark_blue);
+}
+footer a{
+  text-decoration: none;
+  color:black;
+  cursor:pointer;
+  font-size: 1.5rem;
+  margin: 10px;
+  transition: 0.5s ease;
+}
+footer a:hover{
+  text-shadow: 2px 2px 4px #242222;
+}
+footer h5{
+  font-family: 'Alatsi', sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+/* ============================================mobile view========================================================== */
+@media screen and (max-width: 800px){
+  .mid-section {
+    width: 90%;
+    margin: auto;
+  }
+  /* ====================about================================ */
+  .about-container{
+    padding: 50px 20px;
+    padding-top: 20px;
+  }
+  .about-card{
+    grid-template-columns: none;
+    grid-template-rows:200px 300px;
+    height: 40%;
+    width: 100%;
+  }
+  .name-social-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-desc{
+    display: flex;
+    justify-content: center;
+    background-color: #0e0e0eb8;
+    border-top: 2px solid;
+    border-left: none;
+    /* background-color: #fe625a; */
+  }
+  .about-info{
+    width: 90%;
+    align-items: center;
+    /* text-align: justify; */
+    text-align: start;
+  }
+  /* ================================================skills======================================================= */
+  .logo-item{
+    font-size: 40px;
+  }
+  /* ====================================================blogs===================================================== */
+  .blog{
+ flex-direction: column;
+  }
+  .blog-container img{
+    width: 100%;
+    /* border-radius: 10px; */
+  }
+}
