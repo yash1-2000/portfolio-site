@@ -7,11 +7,11 @@ class Nav extends HTMLElement {
     </div>
     <div class="flex1"></div>
     <ul class="navlinks">
-        <li class="li-item"><a href="#experience">experience</a></li>
-        <li class="li-item"><a href="#projects">projects</a></li>
-        <li class="li-item"><a href="#skills">skills</a></li>
-        <li class="li-item"><a href="#skills">blogs</a></li>
-        <li class="li-item"><a href="#education">education</a></li>
+        <li class="li-item"><a href="#experience">EXPERIENCE</a></li>
+        <li class="li-item"><a href="#projects">PEOJECTS</a></li>
+        <li class="li-item"><a href="#skills">SKILLS</a></li>
+        <li class="li-item"><a href="#blogs">BLOGS</a></li>
+        <li class="li-item"><a href="#education">EDUCATION</a></li>
     </ul>
     <div class="burger">
         <div class="line1"></div>
